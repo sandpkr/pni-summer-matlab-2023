@@ -32,13 +32,20 @@ disp(volume)
 %%
 disp('Calculation is finished')
 
+%% Matlab keywords: You cannot use keywords as variable name
+% using while=1 should give you error because while is a keyword
+% to get a list of keywords use iskeyword
+iskeyword
+
+
 %%
 tic
 exp(500)
 toc
 
-% %%
-% %%%% some info about NaN. When do we get NaN in matlab?
-% 0/0;
-% Inf/Inf;
-% 
+%%
+%%%% some info about Inf, NaN. 
+exp(1000)
+0/0;
+Inf/Inf;
+
