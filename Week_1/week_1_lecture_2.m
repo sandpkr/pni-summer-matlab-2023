@@ -14,7 +14,7 @@ array_example_numbers=[1,2,3];
 %% example of a collection of strings
 array_example_chars{1}='Hello';
 array_example_chars{2}='World';
-%% example of collection of an 
+%% example of collection of a number and string 
 number_and_string_array{1,1}=2;
 number_and_string_array{1,2}='text';
 
@@ -38,6 +38,7 @@ three_dim_mat(:,:,3)=[21 22 23; 24 25 26];
 
 %% Defining matrices in matlab
 vector_1=[2:7]
+vector_2=[5:5:30]
 only_odd_numbers=[1:2:13]
 descending_even_numbers=[14:-2:2]
 
