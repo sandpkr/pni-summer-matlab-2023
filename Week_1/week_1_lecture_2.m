@@ -1,5 +1,4 @@
-%%% week_1_lecture_1 code
-%%% This code will calculate the volume of a cube
+%%% week_1_lecture_2 code
 clear
 clc
 
@@ -43,7 +42,17 @@ only_odd_numbers=[1:2:13]
 descending_even_numbers=[14:-2:2]
 
 %% defining matrices in matlab using in-built functions
+matrix_name=linspace(start_num, end_num, num_elements)
+
 clc
 ones(2,3)
+
+%% generate matrix with random numbers
+random_matrix=rand(2,3)
+random_matrix_with_integers=randi(9,2,3) %%% randi(max_integer,num_row, num_col
+normal_distribution_array=randn(10,1)
+
 zeros(3,3)
 nan(2,4)
+
+%%
