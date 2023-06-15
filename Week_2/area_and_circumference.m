@@ -4,5 +4,3 @@ function [area,circumference] = area_and_circumference(radius)
     area=pi*radius^2;
     circumference=2*pi*radius;
 end
-
-c
