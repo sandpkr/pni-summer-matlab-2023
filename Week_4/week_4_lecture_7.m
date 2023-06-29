@@ -38,7 +38,7 @@ end
 
 %% using continue in for loop to skip iteration
 for n = 1:50
-    if rem(n,9)
+    if rem(n,9)~=0
         continue
     end
     disp(['Divisible by 9: ' num2str(n)])
@@ -101,4 +101,23 @@ for i=1:size(to_plot_data,1)
 %     waitforbuttonpress
     close all
 end
+
+%% scatter plots
+x_data=randi([-20 20],1,100);
+y_data=randi([-50 50],1,100);
+scatter(x_data,y_data,'or','MarkerFaceColor','b')
+xlim([-25 25])
+ylim([-55 55])
+
+%% histograms
+histogram(x_data)
+
+%% subplots
+figure;
+subplot(1,2,1)
+plot(sort(x_data),y_data,'-ob')
+subplot(1,2,2)
+scatter(x_data,y_data,'or')
+
+
 
