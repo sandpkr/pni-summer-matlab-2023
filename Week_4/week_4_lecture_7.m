@@ -75,7 +75,7 @@ set(gca,'fontsize',14)
 
 %%
 %%% plotting a histogram
-random_numbers=randn(100);
+rng(100); random_numbers=randn(100);
 figure;
 histogram(random_numbers)
 xlabel('X label','fontsize',14); 
