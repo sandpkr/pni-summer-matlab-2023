@@ -1,0 +1,5 @@
+We'll explore single neuron spiking data in behaving mice toward applying basic decoding and dimensionality reduction approaches.
+Some matlab coding topics getting off the ground in lecture one
+(1) handling different filetypes and programming languages in and out of matlab
+(2) the utility of matlab function cellfun
+(3) 
