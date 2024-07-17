@@ -2,13 +2,11 @@ clear                                                                      %%%% 
 clc                                                                        %%%% It will clear all the texts from command window
 close all                                                                  %%%% It will close all the previous figures
 
-% addpath('G:\My Drive\Grad_School_Year_3\MATLAB_Bootcamp\pni-summer-matlab-2021\Week_5');%%%% path where this MATLAB code file is present
-% cd('G:\My Drive\Grad_School_Year_3\MATLAB_Bootcamp\pni-summer-matlab-2021\Week_5');     %%%% path where the data file from LABCHART is present
-
 %%%%%%%%%%%%%%%%%%%%%% Loading the data file %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-load('nerve_data_example_2.mat');                       %%%% Load the data file 
-data=nerve_voltage;                              
-data(:,2)=-1*data(:,2);
+load('action_potential_array.mat');                       %%%% Load the data file 
+data=action_potential_array;                              
+
+%%
 %%%%%%%%%%%%%%%%%%%%%%%% Plotting raw data %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 figure; 
 plot(data(:,1),data(:,2),'-r')                                     %%%% Plotting Raw data
@@ -58,16 +56,3 @@ ylabel('Amplitude of AP (uV)','fontsize',14)
 title('width vs amplitude of spikes','fontsize',14);
 box off; 
 set(gca,'fontsize',18)
-%%
-%%%%%%% finding the location of peaks with same height
-all_peak_200=[];
-all_locs_200=[];
-
-for i=1:size(pks,1)
-    if pks(i,1)<200 && pks(i,1)>170
-        all_peak_200=[all_peak_200 pks(i,1)];
-        all_locs_200=[all_locs_200 locs(i,1)];
-    end
-end
-
-%%
