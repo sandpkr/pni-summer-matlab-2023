@@ -6,6 +6,8 @@ close all                                                                  %%%% 
 load('action_potential_array.mat');                       %%%% Load the data file 
 data=action_potential_array;                              
 
+% load('action_potential_cropped.mat');                       %%%% Load the data file 
+% data=action_potential_cropped;  
 %%
 %%%%%%%%%%%%%%%%%%%%%%%% Plotting raw data %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 figure; 
@@ -17,7 +19,7 @@ box off;                                                                    %%%%
 set(gca,'fontsize',14)                                                     %%%% This will set the font size of tick labels to be 14
 %%
 %%%%%%%%%%%%%%%% Determining peaks based on threshold %%%%%%%%%%%%%%%%%%%%
-[pks,locs,widths] = findpeaks(data(:,2),'MinPeakHeight',50,'MinPeakDistance',40); %%%% Peak threshold, and minimum inter peak distance
+[pks,locs,widths] = findpeaks(data(:,2),'MinPeakHeight',50,'MinPeakDistance',1); %%%% Peak threshold, and minimum inter peak distance
 figure; 
 plot(data(:,1),data(:,2),'m', 'linewidth',1)  
 hold on
@@ -56,3 +58,6 @@ ylabel('Amplitude of AP (uV)','fontsize',14)
 title('width vs amplitude of spikes','fontsize',14);
 box off; 
 set(gca,'fontsize',18)
+
+%% create a matrix of widths and peaks
+width_vs_peaks_data=[widths,pks];
